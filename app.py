@@ -3,6 +3,7 @@ from tkinter import CENTER
 
 class AgeInputApp:
     def __init__(self, parent):
+        root.iconbitmap("favicon.ico")
         self.parent = parent
         self.age_entries = []
         self.age_labels = []
@@ -25,8 +26,9 @@ class AgeInputApp:
         
         self.parent.destroy()
         self.parent = tk.Tk()
+        
         self.parent.title("Age Input")
-    
+        self.parent.iconbitmap("favicon.ico")
         tk.Label(self.parent, text="Enter Ages:").grid(row=0, column=0)
         for i in range(quant_idades):
             row = i // 13+1
@@ -57,6 +59,7 @@ class AgeCalculationApp:
     def __init__(self, idades):
         self.idades = idades
         self.create_widgets()
+        self.parent.iconbitmap("favicon.ico")
         
     def create_widgets(self):
         self.parent = tk.Tk()
